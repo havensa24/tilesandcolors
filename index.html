@@ -91,19 +91,28 @@
             map.addSource('darknav-tiles', {
                 'type': 'raster',
                 'tiles': [
-                    'file:///C:/Users/alyss/OneDrive/Desktop/MukClin_DarkNav/{z}/{x}/{y}.png'
+                    'assets/MukClin_DarkNav/{z}/{x}/{y}.png'
                 ],
                 'tileSize': 256,
-                'attribution': 'Map tiles designed by Alyssa Havens</a>'
+                'attribution': 'Map tiles designed by Mapbox</a>'
             });
 
-            map.addSource('lgbtq-tiles', {
+            map.addSource('spring-tiles', {
                 'type': 'raster',
                 'tiles': [
-                    'assets/lgbtq/{z}/{x}/{y}.png'
+                    'assets/MukClin_Spring/{z}/{x}/{y}.png'
                 ],
                 'tileSize': 256,
-                'attribution': 'Map tiles designed by Bo Zhao'
+                'attribution': 'Map tiles designed by Alyssa Havens'
+            });
+            
+             map.addSource('fall-tiles', {
+                'type': 'raster',
+                'tiles': [
+                    'assets/MukClin_Fall/{z}/{x}/{y}.png'
+                ],
+                'tileSize': 256,
+                'attribution': 'Map tiles designed by Alyssa Havens'
             });
 
             map.addLayer({
@@ -116,12 +125,21 @@
             });
 
             map.addLayer({
-                'id': 'lgbtq',
+                'id': 'spring',
                 'type': 'raster',
                 'layout': {
                     'visibility': 'none'
                 },
-                'source': 'lgbtq-tiles'
+                'source': 'spring-tiles'
+            });
+            
+             map.addLayer({
+            'id': 'fall',
+            'type': 'raster',
+            'layout': {
+                'visibility': 'none'
+            },
+            'source': 'fall-tiles'
             });
 
         });
@@ -130,12 +148,12 @@
         // After the last frame rendered before the map enters an "idle" state.
         map.on('idle', () => {
             // If these two layers were not added to the map, abort
-            if (!map.getLayer('darknav') || !map.getLayer('lgbtq')) {
+            if (!map.getLayer('darknav') || !map.getLayer('spring') & !map.getLayer('fall')) {
                 return;
             }
 
             // Enumerate ids of the layers.
-            const toggleableLayerIds = ['darknav', 'lgbtq'];
+            const toggleableLayerIds = ['darknav', 'spring', 'fall'];
 
             // Set up the corresponding toggle button for each layer.
             for (const id of toggleableLayerIds) {
