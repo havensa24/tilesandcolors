@@ -148,7 +148,7 @@
         // After the last frame rendered before the map enters an "idle" state.
         map.on('idle', () => {
             // If these two layers were not added to the map, abort
-            if (!map.getLayer('darknav') || !map.getLayer('spring') and !map.getLayer('fall')) {
+            if (!map.getLayer('darknav') || !map.getLayer('spring') || !map.getLayer('fall')) {
                 return;
             }
 
