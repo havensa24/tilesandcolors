@@ -11,7 +11,7 @@ The map loads at a zoom level of 12, but can be zoomed in further with minor upd
 
 ## Tilesets
 <ul>
-<li><a href="[file:///C:/Users/alyss/OneDrive/Desktop/Workspace/tilesandcolors/index.html](https://github.com/havensa24/tilesandcolors/tree/main/MukClin_Basic)">Basic Map Tiles</a></li>
+<li><a href="https://github.com/havensa24/tilesandcolors/tree/main/MukClin_Basic">Basic Map Tiles</a></li>
 <li><a href="https://github.com/havensa24/tilesandcolors/tree/main/MukClin_DarkNav">Night Navigation Tiles</a></li>
 <li><a href="https://github.com/havensa24/tilesandcolors/tree/main/MukClin_Fall">Spring Themed Tiles</a></li>
 <li><a href="https://github.com/havensa24/tilesandcolors/tree/main/MukClin_Spring">Fall Themed Tiled</a></li>
